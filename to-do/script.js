@@ -21,6 +21,28 @@ document.addEventListener('DOMContentLoaded', ()=>{
             }, 100);
         }
     });
+    
+    function buttonclick(){
+        const taskText = todoInput.value.trim();
+        if (taskText === "") return;
+
+        const newtask = {
+          id: Date.now(),
+          text: taskText,
+          completed: false,
+        };
+        tasks.push(newtask);
+        savetasks();
+        rendertasks(newtask);
+        todoInput.value = "";
+        console.log(tasks);
+    }
+
+    function enterkey(event){
+        if(event.key === "Enter"){
+            buttonclick();
+        }
+    }
 
     const todoInput = document.getElementById("todo-input");
     const addButton = document.getElementById('add-task-btn');
@@ -35,21 +57,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
         localStorage.setItem('tasks', JSON.stringify(tasks));
     }
 
-    addButton.addEventListener('click', ()=>{
-        const taskText = todoInput.value.trim();
-        if(taskText ==="") return;
-
-        const newtask = {
-            id : Date.now(),
-            text : taskText,
-            completed : false
-        };
-        tasks.push(newtask);
-        savetasks();
-        rendertasks(newtask);
-        todoInput.value = "";
-        console.log(tasks);
-    });
+    addButton.addEventListener('click', buttonclick);
+    todoInput.addEventListener('keyup', enterkey);
 
     function rendertasks(task){
         const li = document.createElement('li');
