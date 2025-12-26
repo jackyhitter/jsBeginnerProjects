@@ -3,12 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark">
     <title>Weather App</title>
-    <link rel="stylesheet" href="styles.css" />
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+    <style>
+      .hidden{
+        display: none;
+      }
+      h1{
+        display: inline-block;
+      }
+      span:hover{
+        cursor: pointer;
+      }
+      span{
+        text-decoration: underline;
+        color: rgb(83, 96, 211);
+        margin: 10px;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
       <h1>Weather App</h1>
+      <span id="loadStyle">Change Style</span>
       <div class="input-container">
         <input type="text" id="city-input" placeholder="Enter city name" />
         <button id="get-weather-btn">Get Weather</button>
@@ -17,6 +35,7 @@
         <h2 id="city-name"></h2>
         <p id="temperature"></p>
         <p id="description"></p>
+        <p id="wind-speed"></p>
       </div>
       <p id="error-message" class="hidden">City not found. Please try again.</p>
     </div>

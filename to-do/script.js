@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             li.remove();
             savetasks();
         })
-        todoList.appendChild(li);
+        todoList.prepend(li);
     }
 })
 
