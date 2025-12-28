@@ -33,6 +33,17 @@ function main() {
       answer: "William Shakespeare",
       weight: 3,
     },
+    {
+      question: "How many moons does jupiter has",
+      choices: [
+        '85',
+        '95',
+        '78',
+        '82',
+      ],
+      answer: '95',
+      weight: 10,
+    }
   ];
 
   let currentQuestionIndex = 0;
