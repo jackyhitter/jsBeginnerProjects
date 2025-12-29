@@ -35,16 +35,14 @@ function main() {
     },
     {
       question: "How many moons does jupiter has",
-      choices: [
-        '85',
-        '95',
-        '78',
-        '82',
-      ],
-      answer: '95',
+      choices: ["85", "95", "78", "82"],
+      answer: "95",
       weight: 10,
-    }
+    },
   ];
+
+  //suffling the arr
+  shuffleArray(questions);
 
   let currentQuestionIndex = 0;
   let score = 0;
@@ -75,6 +73,7 @@ function main() {
     currentQuestionIndex = 0;
     score = 0;
     resultContainer.classList.add("hidden");
+    shuffleArray(questions);
     startQuiz();
   });
 
@@ -117,5 +116,13 @@ function main() {
     questionContainer.classList.add("hidden");
     resultContainer.classList.remove("hidden");
     scoreDisplay.textContent = `${score} out of ${totalMarks}`;
+  }
+
+  function shuffleArray(arr) {
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
   }
 }
