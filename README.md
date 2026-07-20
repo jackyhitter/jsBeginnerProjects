@@ -40,7 +40,14 @@ From DOM manipulation to API integration and local storage — each project help
 ---
 
 # 📸 Preview
+<div>
+<img width="442" height="606" alt="image" src="https://github.com/user-attachments/assets/e5389a6a-9559-4fd2-ad3f-bfe5489d30e7" />
+<img width="370" height="277" alt="image" src="https://github.com/user-attachments/assets/595c116e-2ded-4b62-8005-8c243aa3d135" />
+<img width="390" height="336" alt="image" src="https://github.com/user-attachments/assets/6c77cb11-c9ff-4545-9e41-229c0c59d96a" />
+<img width="532" height="333" alt="image" src="https://github.com/user-attachments/assets/f33e4f25-86b6-4dd4-9a10-c2232b0cfaaa" />
 
+
+</div>
 > Each project is deployed using **GitHub Pages**, so feel free to explore them directly from the links above.
 
 ---
