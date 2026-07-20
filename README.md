@@ -48,7 +48,7 @@ From DOM manipulation to API integration and local storage — each project help
 
 
 </div>
-> Each project is deployed using **GitHub Pages**, so feel free to explore them directly from the links above.
+> Each project is deployed using "GitHub Pages", so feel free to explore them directly from the links above.
 
 ---
 
